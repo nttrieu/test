@@ -72,6 +72,6 @@ if [ ! -f $HOME/create-index-pattern.sh ]; then
 fi
 
 
-echo "To set VM setting, run: sudo echo 'vm.max_map_count=262144' >> /etc/sysctl.conf"
+echo "To set VM setting, run: echo 'vm.max_map_count=262144' | sudo tee -a /etc/sysctl.conf"
 echo "Please copy ${container_name} logs to log folder and run: docker-compose up -d"
 echo "Once indices are created, add index patterns via create-index-pattern.sh"
